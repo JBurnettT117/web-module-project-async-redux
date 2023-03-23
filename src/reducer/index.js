@@ -3,7 +3,7 @@ import data from "../gifs";
 const initialState = {
     gifs: data,
     loading: false,
-    err:""
+    error:""
 }
 
 const reducer = (state = initialState, action) => {
