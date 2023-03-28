@@ -2,19 +2,19 @@ import  { connect } from 'react-redux';
 import React from 'react';
 import './App.css';
 import { useEffect } from 'react';
-import { fetchStart } from './actions';
+import { getGifs } from './actions';
 import GifForm from "./GifForm";
 import GifList from "./GifList";
 import data from "./gifs"; 
 
 function App(props) {
 
-  const { loading, error } = props;
+  const { loading, error, getGifs } = props;
 
-  console.log("props:",props);
+  console.log(props);
 
   useEffect(() => {
-    props.fetchStart();
+    getGifs();
   }, []);
 
   return (
@@ -47,4 +47,4 @@ const mapActionsToProps = () => {
   }
 }
 
-export default connect(mapStateToProps, { fetchStart })(App);
+export default connect(mapStateToProps, { getGifs })(App);
