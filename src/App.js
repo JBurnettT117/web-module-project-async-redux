@@ -14,7 +14,7 @@ function App(props) {
   console.log(props);
 
   useEffect(() => {
-    getGifs();
+    getGifs("planes");
   }, []);
 
   return (
