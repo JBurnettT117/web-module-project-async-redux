@@ -24,6 +24,58 @@
   color: white;
 }
 
+.gif {
+  background-color: lightslategray;
+  display: flex;
+  width: 100vw;
+  border-bottom: 2px black solid;
+}
+
+.gifholder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+.gifleft {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  width: 50vw;
+  justify-content: space-between;
+}
+
+.gifright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.giffyButton {
+  
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: navy;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  
+}
+
+.realgif {
+  width: 21vw;
+  /* padding: 2vw; */
+  height: 21vw;
+}
+
 .App-link {
   color: #61dafb;
 }

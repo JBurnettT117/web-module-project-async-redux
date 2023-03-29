@@ -10,7 +10,6 @@ export const getGifs = (searchTerm) => {
         dispatch(fetchStart());
         axios.get(`https://api.giphy.com/v1/gifs/search?api_key=xjxVcDDyAWbBm3yUYGowh4yXyosZ80PP&q=${searchTerm}`)
             .then(res =>{
-                console.log(res);
                 dispatch(fetchSuccess(res.data.data));
             })
             .catch(err => {

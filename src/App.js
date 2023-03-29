@@ -11,24 +11,23 @@ function App(props) {
 
   const { loading, error, getGifs } = props;
 
-  console.log(props);
-
   useEffect(() => {
     getGifs("planes");
   }, []);
 
   return (
     <div className="App">
-      <h1>Search for Gifs</h1>
-
-      <GifForm />
+      <div className='header'>
+        <h1>Search for Gifs</h1>
+        <GifForm />
+      </div>
 
       {
         (error !== "") && <h3>{error}</h3>
       }
 
       {
-        loading ? <h3>We are loading</h3> : <GifList/>
+        loading ? <h3>We are loading</h3> : <div className='gifholder' ><GifList/></div>
       }
     </div>
   );
